@@ -1,3 +1,1 @@
-# require 'codebreaker/game'
-
-require 'game'
+require 'codebreaker/game'

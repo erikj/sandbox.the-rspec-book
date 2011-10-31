@@ -3,7 +3,7 @@ module Codebreaker
   class Game
 
     def initialize(output)
-     @output = output
+      @output = output
     end
 
     def start(secret)
@@ -12,6 +12,7 @@ module Codebreaker
     end
 
     def guess(guess)
+      @output.puts ''
     end
 
   end

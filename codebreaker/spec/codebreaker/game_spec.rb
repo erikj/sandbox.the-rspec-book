@@ -18,7 +18,7 @@ module Codebreaker
 
     end
 
-    describe "#feature" do
+    describe "#guess" do
       context "with no matches" do
         it "sends an empty mark" do
           game.start('1234')

@@ -13,16 +13,16 @@ module Codebreaker
     end
 
     def guess(guess)
-      exacts, numbers = '', ''
+      matches = { :exact=>'', :numeric=>'' }
 
       (0..3).each do |index|
         if exact_match? guess, index
-          exacts << '+'
+          matches[:exact] << '+'
         elsif number_match? guess, index
-          numbers << '-'
+          matches[:numeric] << '-'
         end 
       end
-      @output.puts exacts + numbers
+      @output.puts matches[:exact] + matches[:numeric]
     end
 
     def exact_match? guess, index

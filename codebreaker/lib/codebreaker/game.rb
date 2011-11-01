@@ -13,25 +13,42 @@ module Codebreaker
     end
 
     def guess(guess)
-      matches = { :exact=>'', :numeric=>'' }
-
-      (0..3).each do |index|
-        if exact_match? guess, index
-          matches[:exact] << '+'
-        elsif number_match? guess, index
-          matches[:numeric] << '-'
-        end 
-      end
-      @output.puts matches[:exact] + matches[:numeric]
-    end
-
-    def exact_match? guess, index
-      guess[index] == @secret[index]
-    end
-
-    def number_match? guess, index
-      @secret.include? guess[index]
+      marker = Marker.new( @secret, guess )
+      @output.puts '+' * marker.exact_match_count() + '-' * marker.number_match_count()
     end
 
   end
+
+  class Marker
+
+    def initialize( secret, guess )
+      @secret, @guess = secret, guess
+    end
+
+    def exact_match? index
+      @guess[index] == @secret[index]
+    end
+
+    def number_match? index
+      @secret.include? @guess[index]
+    end
+
+    def exact_match_count
+      count = 0
+      (0..3).each do |index|
+        count += 1 if exact_match? index
+      end
+      return count
+    end
+
+    def number_match_count
+      count = 0
+      (0..3).each do |index|
+        count += 1 if !exact_match? index and number_match? index
+      end
+      return count
+    end
+
+  end
+
 end

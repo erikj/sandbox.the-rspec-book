@@ -36,12 +36,14 @@ Then  /^I should see "([^"]*)"$/ do |message|
 end
 
 Given /^the secret code is "([^"]*)"$/ do |secret|
-  # pending # express the regexp above with the code you wish you had
-  game = Codebreaker::Game.new(output)
-  game.start(secret)
+  @game = Codebreaker::Game.new(output)
+  @game.start(secret)
 end
 
-When  /^I guess "([^"]*)"$/ do |guess|
-  @game = Codebreaker::Game.new(output)
+When /^I guess "([^"]*)"$/ do |guess|
   @game.guess(guess)
+end
+
+Then  /^the mark should be "([^"]*)"$/ do |mark|
+  output.messages.should include(mark)
 end

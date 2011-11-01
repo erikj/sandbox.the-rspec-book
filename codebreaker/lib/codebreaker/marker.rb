@@ -23,11 +23,19 @@ module Codebreaker
     end
 
     def number_match_count
+      total_match_count - exact_match_count
+    end
+
+    def total_match_count
       count = 0
-      (0..3).each do |index|
-        count += 1 if !exact_match? index and number_match? index
+      secret = @secret.split('')
+      @guess.split('').map do |n|
+        if secret.include? n
+          secret.delete_at secret.index(n)
+          count += 1
+        end
       end
-      return count
+      count
     end
 
   end

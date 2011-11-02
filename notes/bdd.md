@@ -58,7 +58,10 @@ use RSpec to code by example to get the scenario working. The RSpec portions of 
 
 ### iteration:
 
- - Eventually we end up with just enough software to make the scenario work, and then we iterate through the other scenarios until we are done. This then brings us full circle, such that we can demonstrate the working scenarios back to the stakeholder, and the story is done.
+with just enough software to make the scenario work:
+
+- iterate through the other scenarios until we are done
+- demonstrate the working scenarios back to the stakeholder, and the story is done.
 
 
 

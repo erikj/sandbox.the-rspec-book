@@ -42,7 +42,23 @@ good during project inception: identify and mitigate the "gotchas."
 
 ## Delivery Cycle
 
+### pre programming:
+
 - stakeholder discusses requirement w/ business analyst.
 - stakeholder and analyst work w/ tester to determine the stories' scope, *what does **done** look like for each story*
-- 
+- automate the scenarios where it makes sense to do so
+
+### programming:
+
+use RSpec to code by example to get the scenario working. The RSpec portions of The RSpec book describe exactly how to do this.
+
+- write a code example to describe the behavior we want
+- implement the code to make that example work
+- refactor
+
+### iteration:
+
+ - Eventually we end up with just enough software to make the scenario work, and then we iterate through the other scenarios until we are done. This then brings us full circle, such that we can demonstrate the working scenarios back to the stakeholder, and the story is done.
+
+
 

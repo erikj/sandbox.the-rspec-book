@@ -1,5 +1,8 @@
 # Cucumber
 
+Cucumber notes from [The Rspec Book](http://pragprog.com/book/achbd/the-rspec-book)
+
+
 <https://github.com/cucumber/cucumber/wiki/>
 
 "Cucumber is a tool that executes plain-text functional descriptions as automated tests. The language that Cucumber understands is called [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin)"

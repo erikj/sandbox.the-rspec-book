@@ -40,6 +40,7 @@ don't get hung up on details, or it may create false expectations with stakehold
 good during project inception: identify and mitigate the "gotchas."
 
 **feature:** delivers cohesive value to stakeholders
+
 **story:** demonstratable functionality that takes a few days or less to develop
 
 

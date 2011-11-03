@@ -1,8 +1,11 @@
 # BDD
 
+BDD notes from [The Rspec Book](http://pragprog.com/book/achbd/the-rspec-book)
+
+
 BDD is about writing software that matters.
 
-software that matters: *software that has value to a that is neither too little to solve the problem nor over-engineered, and that we can demonstrate works.*
+software that matters: *software that has value to a stakeholder that is neither too little to solve the problem nor over-engineered, and that we can demonstrate works.*
 
 *Behaviour-Driven Development is about implementing an application by describing its behavior from the perspective of its stakeholders.*
 

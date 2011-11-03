@@ -65,3 +65,17 @@ with just enough software to make the scenario work:
 
 
 
+## Stories
+
+A story consists of a number of components:
+
+- **title** so we know which story we are talking about.
+- **narrative** that tells us what this story is about. Identify
+  - the stakeholder for this story
+  - a description of the feature they want,
+  - the reason they want it-- the benefit they expect to gain by us delivering this behavior.
+  - formats:
+    - as a *stakeholder* I want *feature* so that *benefit*
+     - in order to *benefit*, a *stakeholder* wants to *feature*
+- **acceptance criteria** we know when we are done. In BDD, the acceptance criteria take the form of a number of scenarios made up of individual steps.
+
